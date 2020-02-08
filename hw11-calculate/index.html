@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate</title>
+    <style>
+        body {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+        }
+
+        button, input {
+            width: 150px;
+            margin: 1px;
+            border: 1px solid rgb(226, 226, 226);
+            background-color: white;
+        }
+
+        button:active {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input type="text" id="send_value"><br>
+    <script>
+        function add_value(result){
+        document.getElementById('send_value').value+=result;
+    }
+    </script>
+    <button onclick="add_value('+');">Я добавлю +</button>
+    <button onclick="add_value('-');">Я добавлю -</button>
+    <button onclick="add_value('/');">Я добавлю /</button>
+    <button onclick="add_value('*');">Я добавлю *</button>
+    <p></p>
+    <button onclick="add_value(1);">1</button>
+    <button onclick="add_value(2);">2</button>
+    <button onclick="add_value(3);">3</button>
+    <button onclick="add_value(4);">4</button>
+    <button onclick="add_value(5);">5</button>
+    <button onclick="add_value(6);">6</button>
+    <button onclick="add_value(7);">7</button>
+    <button onclick="add_value(8);">8</button>
+    <button onclick="add_value(9);">9</button>
+    <button onclick="add_value(0);">0</button>
+
+
+</body>
+
+</html>
