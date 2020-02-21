@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+    <style>
+        img{
+            width: 200px;
+            height: 170px;
+        
+        }
+    </style>
+    <script>
+
+        var i = 1;
+        function ref() { i=4 }
+        function viewImages() {
+            if (i <= 3) {
+                if (i == 1) { document.main_cat.src = '1.jpg'; i++ }
+                else if (i == 2) { document.main_cat.src = '2.jpg'; i++ }
+                else if (i == 3) { document.main_cat.src = '3.png'; i = 1 }
+                setTimeout("viewImages()", 1000);
+            }
+
+            
+                // switch(true){
+                //     case i==1: { document.main_cat.src = '1.jpg'; i++ }; 
+                //     case i==2: { document.main_cat.src = '2.jpg'; i++ }; 
+                //     case i==3: { document.main_cat.src = '3.png'; i = 1 }; 
+                
+                // setTimeout("viewImages()", 1000);
+                // }
+            
+            
+        }
+     </script>
+</head>
+<body onLoad='viewImages()'>
+    <img src="1.jpg" name="main_cat">
+    <FORM>
+        <input type="reset" value="Ocтановить" onClick=ref()>
+        <input type="button" value="Haчать снова" onClick="i=1; viewImages()">
+    </FORM>
+</body>
+
+</html>
