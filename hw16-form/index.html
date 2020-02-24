@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" name="first_field" id="first_field"><br>
+        <label for="add">Add new field</label>
+        <input id="add" type="checkbox" name="check" value="add">
+        <br>
+        <button type="submit"> Submit </button>
+    </form>
+
+    <script>
+        let chk = document.getElementById("add")
+        chk.addEventListener('change', function () {
+            console.log(chk.checked)
+            if (chk.checked) {
+                chk.insertAdjacentHTML('afterend', '<div class="opa"><br><label id="t" type="text" name="second_field">Add another text</label><input type="text" name="second_field" id="second_field"></input></div>')
+            }
+            else {
+                let div = document.querySelector('.opa')
+                div.remove()
+            }
+        });
+
+        let sbm = document.querySelector('form')
+        sbm.addEventListener('submit', function () {
+            if (sbm.submit) {
+                if (chk.checked) {
+                    var param = document.getElementById('first_field').getAttribute('name') + "=" + document.getElementById("first_field").value +
+                    "\n" + document.getElementById('add').getAttribute('name') + "=" + document.getElementById('add').value +
+                        "\n" + document.getElementById('second_field').getAttribute('name') + "=" + document.getElementById("second_field").value;
+                    alert(param);
+                }
+                else {
+                    var param = document.getElementById('first_field').getAttribute('name') + "=" + document.getElementById("first_field").value;
+                    alert(param);
+                }
+            }
+
+        })
+   //доделать
+//    если ввели значение и чекбокс чекнуть - то по сабмину в 
+// алерте выводится все name инпутов и то что ввели, а у чекбокса 
+// value (name=value)
+//    сабмин на форме (евент sabmit)
+//    на сабмите нужно пробежаться по всем элементам формы и взять их имя и начение, чтобы потом вывести в алерт 
+
+
+        // function newInput(){
+        //     if 
+
+
+    //     на чекбокс addEventListener('change', функция)
+    //     onchange= 
+    //     если чекбок нажат = добавить нод элемент 
+    //     функция для обработки события с чекбокса: аргумент - возвращает эелемент, на котором сработало событие (т.к чекбокс, и далее надо проверить чекнут он или нет)
+    // 
+    </script>
+
+</body>
+
+</html>
