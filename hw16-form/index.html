@@ -7,13 +7,14 @@
 </head>
 
 <body>
-    <form action="">
+    <form action="" target="myIFR">
         <input type="text" name="first_field" id="first_field"><br>
         <label for="add">Add new field</label>
         <input id="add" type="checkbox" name="check" value="add">
         <br>
         <button type="submit"> Submit </button>
     </form>
+    <iframe name="myIFR" style="display: none"></iframe>
 
     <script>
         let chk = document.getElementById("add")
@@ -44,23 +45,7 @@
             }
 
         })
-   //доделать
-//    если ввели значение и чекбокс чекнуть - то по сабмину в 
-// алерте выводится все name инпутов и то что ввели, а у чекбокса 
-// value (name=value)
-//    сабмин на форме (евент sabmit)
-//    на сабмите нужно пробежаться по всем элементам формы и взять их имя и начение, чтобы потом вывести в алерт 
-
-
-        // function newInput(){
-        //     if 
-
-
-    //     на чекбокс addEventListener('change', функция)
-    //     onchange= 
-    //     если чекбок нажат = добавить нод элемент 
-    //     функция для обработки события с чекбокса: аргумент - возвращает эелемент, на котором сработало событие (т.к чекбокс, и далее надо проверить чекнут он или нет)
-    // 
+ 
     </script>
 
 </body>
