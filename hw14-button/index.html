@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <style>
+        body {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+        }
+
+        button {
+            width: 170px;
+            margin: 1px;
+         
+        }
+       
+        input[type="button"]:active {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="send_value"><br>
+    <script>
+
+var properties = [
+            {
+
+                value: "Я добавлю +",
+                tag: "button",
+                events:
+                {
+                    onclick: function () 
+                        {
+                          alert('henlo')
+                    },
+                    onfocus: function () { 
+                        console.log("2222")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "Я добавлю -",
+                events:
+                {
+                    onclick: function () 
+                        { alert("3333") 
+                    },
+                    onfocus: function () { 
+                        console.log("44444")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "Я добавлю /",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("5555") 
+                    },
+                    onfocus: function () { 
+                        console.log("6666")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "Я добавлю *",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("7777") 
+                    },
+                    onfocus: function () { 
+                        console.log("8888")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "1",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("99999") 
+                    },
+                    onfocus: function () { 
+                        console.log("00000")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "2",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("aaaaa") 
+                    },
+                    onfocus: function () { 
+                        console.log("click!")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "3",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("cmv") 
+                    },
+                    onfocus: function () { 
+                        console.log("click!")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "4",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("first click!") 
+                    },
+                    onfocus: function () { 
+                        console.log("121212")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "5",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("mimim") 
+                    },
+                    onfocus: function () { 
+                        console.log("click!!!!")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "6",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("two!") 
+                    },
+                    onfocus: function () { 
+                        console.log("hihih")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "7",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("one!") 
+                    },
+                    onfocus: function () { 
+                        console.log("click!")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "8",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("aaaaaa") 
+                    },
+                    onfocus: function () { 
+                        console.log("hi")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "9",
+                events:
+                {
+                    onclick: function cl() 
+                        { console.log("you're click again!!") 
+                    },
+                    onfocus: function () { 
+                        alert("pic")  
+                    },
+                }
+
+            },
+            {
+                tag: "button",
+                value: "0",
+                events:
+                {
+                    onclick: function () 
+                        { console.log("stop clicking") 
+                    },
+                    onfocus: function () { 
+                        console.log("click!")  
+                    },
+                }
+
+            }
+        ]
+
+        function createElements (tag, value, events) {
+            for (let index = 0; index < properties.length; index++) {
+                const property = properties[index];
+                const tag = property.tag;
+                const value = property.value;
+                let events = property.events;
+        
+
+                let btn = document.createElement(tag);
+                let newtext = document.createTextNode(value)
+         
+           
+                for (let key in events){
+                    btn.addEventListener('click', events[key]);
+                 }
+             
+                document.body.appendChild(btn);
+                btn.appendChild(newtext);
+            }
+        }
+        createElements();
+    </script>
+
+</body>
+
+</html>
