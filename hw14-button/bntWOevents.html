@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate</title>
+    <style>
+        body {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+        }
+
+        input {
+            width: 250px;
+            margin: 1px;
+            border: 1px solid rgb(226, 226, 226);
+            background-color: white;
+        }
+       
+        input[type="button"]:active {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="send_value"><br>
+    <script>
+
+        var properties = [
+            {
+                type: "button",
+                value: "Я добавлю +",
+                tag: "input",
+                name: "+",
+
+            },
+            {
+                type: "button",
+                value: "Я добавлю -",
+                tag: "input",
+                name: "-",
+
+            },
+            {
+                type: "button",
+                value: "Я добавлю /",
+                tag: "input",
+                name: "/",
+
+            },
+            {
+                type: "button",
+                value: "Я добавлю *",
+                tag: "input",
+                name: "*",
+
+            },
+            {
+                type: "button",
+                value: "1",
+                tag: "input",
+                name: "1",
+
+            },
+            {
+                type: "button",
+                value: "2",
+                tag: "input",
+                name: "2",
+
+            },
+            {
+                type: "button",
+                value: "3",
+                tag: "input",
+                name: "3",
+
+            },
+            {
+                type: "button",
+                value: "4",
+                tag: "input",
+                name: "4",
+
+
+            },
+            {
+                type: "button",
+                value: "5",
+                tag: "input",
+                name: "5",
+
+            },
+            {
+                type: "button",
+                value: "6",
+                tag: "input",
+                name: "6",
+            },
+            {
+                type: "button",
+                value: "7",
+                tag: "input",
+                name: "7",
+
+            },
+            {
+                type: "button",
+                value: "8",
+                tag: "input",
+                name: "8",
+
+            },
+            {
+                type: "button",
+                value: "9",
+                tag: "input",
+                name: "9",
+
+            },
+            {
+                type: "button",
+                value: "0",
+                tag: "input",
+                name: "0",
+
+            }
+        ]
+
+        function createElements(properties) {
+            for (let index = 0; index < properties.length; index++) {
+                const property = properties[index];
+                const events = property.events;
+
+                let btn = document.createElement('input');
+                btn.type = property.type;
+                btn.value = property.value;
+                btn.tagName = property.tag;
+
+                document.body.append(btn);
+                btn.onclick = function add() {
+                    document.getElementById('send_value').value += property.name;
+                }
+
+            }
+        }
+        createElements(properties);
+    </script>
+
+</body>
+
+</html>
