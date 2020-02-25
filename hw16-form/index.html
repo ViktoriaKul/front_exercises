@@ -7,14 +7,14 @@
 </head>
 
 <body>
-    <form action="" target="myIFR">
+    <form action="" onsubmit="return false;">
         <input type="text" name="first_field" id="first_field"><br>
         <label for="add">Add new field</label>
         <input id="add" type="checkbox" name="check" value="add">
         <br>
         <button type="submit"> Submit </button>
     </form>
-    <iframe name="myIFR" style="display: none"></iframe>
+
 
     <script>
         let chk = document.getElementById("add")
