@@ -34,11 +34,11 @@ var properties = [
                 tag: "button",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         {
                           alert('henlo')
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("2222")  
                     },
                 }
@@ -49,10 +49,10 @@ var properties = [
                 value: "Я добавлю -",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { alert("3333") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("44444")  
                     },
                 }
@@ -63,10 +63,10 @@ var properties = [
                 value: "Я добавлю /",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("5555") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("6666")  
                     },
                 }
@@ -77,10 +77,10 @@ var properties = [
                 value: "Я добавлю *",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("7777") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("8888")  
                     },
                 }
@@ -91,10 +91,10 @@ var properties = [
                 value: "1",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("99999") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("00000")  
                     },
                 }
@@ -105,10 +105,10 @@ var properties = [
                 value: "2",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("aaaaa") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("click!")  
                     },
                 }
@@ -119,10 +119,10 @@ var properties = [
                 value: "3",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("cmv") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("click!")  
                     },
                 }
@@ -133,10 +133,10 @@ var properties = [
                 value: "4",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("first click!") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("121212")  
                     },
                 }
@@ -147,10 +147,10 @@ var properties = [
                 value: "5",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("mimim") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("click!!!!")  
                     },
                 }
@@ -161,10 +161,10 @@ var properties = [
                 value: "6",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("two!") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("hihih")  
                     },
                 }
@@ -175,10 +175,10 @@ var properties = [
                 value: "7",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("one!") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("click!")  
                     },
                 }
@@ -189,10 +189,10 @@ var properties = [
                 value: "8",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("aaaaaa") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("hi")  
                     },
                 }
@@ -203,10 +203,10 @@ var properties = [
                 value: "9",
                 events:
                 {
-                    onclick: function cl() 
+                    click: function cl() 
                         { console.log("you're click again!!") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         alert("pic")  
                     },
                 }
@@ -217,10 +217,10 @@ var properties = [
                 value: "0",
                 events:
                 {
-                    onclick: function () 
+                    click: function () 
                         { console.log("stop clicking") 
                     },
-                    onfocus: function () { 
+                    focus: function () { 
                         console.log("click!")  
                     },
                 }
@@ -241,7 +241,7 @@ var properties = [
          
            
                 for (let key in events){
-                    btn.addEventListener('click', events[key]);
+                    btn.addEventListener(key, events[key]);
                  }
              
                 document.body.appendChild(btn);
